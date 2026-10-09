@@ -1,0 +1,19 @@
+{
+  "name": "amns-sfi-register",
+  "version": "2.0.0",
+  "private": true,
+  "description": "AM/NS SFI portal with backend-only data, SQLite persistence, photo uploads and Power Automate notifications",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "better-sqlite3": "^11.8.1",
+    "express": "^4.21.2",
+    "multer": "^1.4.5-lts.1"
+  }
+}

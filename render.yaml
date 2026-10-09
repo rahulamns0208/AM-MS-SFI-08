@@ -1,0 +1,23 @@
+services:
+  - type: web
+    name: amns-sfi-register
+    runtime: node
+    plan: starter
+    buildCommand: npm install
+    startCommand: npm start
+    healthCheckPath: /api/health
+    envVars:
+      - key: NODE_VERSION
+        value: 20
+      - key: DATA_DIR
+        value: /var/data
+      - key: UPLOAD_DIR
+        value: /var/data/uploads
+      - key: PA_WEBHOOK_URL
+        sync: false
+      - key: PA_SHARED_SECRET
+        sync: false
+    disk:
+      name: amns-sfi-data
+      mountPath: /var/data
+      sizeGB: 1
